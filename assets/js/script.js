@@ -95,6 +95,17 @@ function fiveDay( ) {
         $(".fiveDay").append(featureCard);
 }
 
+$("#submit").on('click', function(event){
+  event.preventDefault();
+    console.log('testing 123');
+    
+   city  = "#cityName";
+
+    displayCity();
+    fiveDay();
+}
+)
+
 $("#atlanta").on("click", function (event){
     event.preventDefault();
     console.log('testing 123');

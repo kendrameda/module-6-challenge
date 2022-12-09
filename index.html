@@ -10,11 +10,19 @@
     <title>Weather app api</title>
 </head>
 <body>
-    <header class="header">
+    <header >
         <h1>Weather Dashboard</h1>
     </header>
 
     <aside>
+
+      <form action="submit">
+        <label id="cityNameBar" for="cityName"><strong>City Name:</strong></label><br>
+        <input type="text" id="cityName" name="cityName" value="John"><br>
+        <br>
+        <input id="submit" type="submit" value="Submit">
+      </form>
+
         <nav>
             <div class="nav-wrapper">
               <form>
@@ -43,22 +51,14 @@
     <main>
         
 
-        <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-  <div class="card-header"></div>
-  <div class="card-body">
-    <p class="current-temp"></p>
-  </div>
-</div>
-
-
-<div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-  <div class="card-header"></div>
-  <div class="card-body">
-    <p class="fiveDay"></p>
-  </div>
-</div>        
+               
 
     </main>
+
+    <footer>
+
+      <p>⛅Powered by thunder and Open Weather Map API⚡</p>
+    </footer>
 
     
 

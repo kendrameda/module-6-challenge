@@ -1,10 +1,20 @@
-.header {
-    background-color: blue;
+body {
+    background-image: url(./weather2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    color: white;
     
 }
 h1{
     display: block;
     text-align: center;
+}
+
+#cityNameBar {
+    text-align: left;
+    text-size-adjust: 30px;
 }
 
 .specific-button {
@@ -16,4 +26,13 @@ h1{
     display: block;
     text-align: center;
     
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
 }
