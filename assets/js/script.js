@@ -42,9 +42,58 @@ function displayCity() {
 
         $(".current-temp").append(featureCard);
 
+        
+
       });
 
 };
+
+function fiveDay( ) {
+    var API_Url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}&units=${units}&lang=${lang}`;
+
+    fetch(API_Url)
+    .then(function (response) {
+      return response.json();
+    })
+      .then(function (data) {
+        console.log(data);
+        console.log('test');
+      })
+
+      var realTemp = data.list[1].main.temp;
+        console.log(realTemp);
+
+        var windSpeed = data.list[1].wind.speed;
+
+        var windDirect = data.list[1].wind.deg;
+
+        var humid = data.list[1].main.humidity;
+
+        $(".fiveDay").empty();
+
+        var featureCard = $("<div>");
+
+        var city = data.city.name;
+
+
+        var realTemp = data.list[0].main.temp;
+        console.log(realTemp);
+
+        var windSpeed = data.list[0].wind.speed;
+
+        var windDirect = data.list[0].wind.deg;
+
+        var humid = data.list[0].main.humidity;
+
+        featureCard.append("<br/>" + "Current city: " + city  + "<br/>");
+
+        featureCard.append("<br/>" + "Current Temp: " + realTemp + '℉' + "<br/>");
+        
+        featureCard.append("<br/>" + "Wind Speed: " + windSpeed + ' ' + windDirect + '°' + "<br/>");
+        featureCard.append("<br/>" + "Humidity: " + humid + '%' + "<br/>");
+
+        $(".fiveDay").append(featureCard);
+}
 
 $("#atlanta").on("click", function (event){
     event.preventDefault();
@@ -53,6 +102,7 @@ $("#atlanta").on("click", function (event){
    city = 'atlanta';
 
     displayCity();
+    fiveDay();
 
 });
 

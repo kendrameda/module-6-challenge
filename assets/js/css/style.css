@@ -1,0 +1,19 @@
+.header {
+    background-color: blue;
+    
+}
+h1{
+    display: block;
+    text-align: center;
+}
+
+.specific-button {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.current-temp {
+    display: block;
+    text-align: center;
+    
+}
