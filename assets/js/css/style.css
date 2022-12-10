@@ -7,9 +7,10 @@ header {
     color: white;
     
 }
-h1{
+h2{
     display: block;
     text-align: center;
+    text-size-adjust: 10px;
 }
 
 #cityNameBar {
@@ -17,9 +18,15 @@ h1{
     text-size-adjust: 30px;
 }
 
-.specific-button {
+.specific-buttons {
     display: flex;
     flex-wrap: wrap;
+}
+
+#text-box {
+    background-color: white;
+    align-items: center
+    ;
 }
 
 .current-temp {
@@ -29,10 +36,38 @@ h1{
 }
 
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     text-align: center;
     background-color: black;
     color: white;
+    
+}
+
+#weather-card {
+    display: block;
+    align-self: center;
+}
+
+h5 {
+    font-family: cursive;
+}
+
+.card {
+    width: fit-content;
+    padding: 7%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5%;
+
+    
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+}
+.cardA {
+    padding: 5px;
 }
