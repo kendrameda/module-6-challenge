@@ -6,6 +6,8 @@ var lang = 'en';
 var units = 'imperial';
 var city = $("#cname").val().trim();
 
+
+
 function displayCity() {
 
   var city = $("#cname").val().trim();
@@ -285,9 +287,20 @@ dayAfter5();
 
 
 
-  })
+  });
 
-  
+//   var input = document.getElementById('saveServer');
+// localStorage.setItem('server', input.val());
+
+var input = document.getElementById('saveServer').ariaValueMax;
+localStorage.setItem('server', input);
+
+document.getElementById('saveServer').value = localStorage.getItem('server');
+
+//   var storedValue = localStorage.getItem("server");
+
+  // storedValue();
+
   
   // $(document).ready(function() {
   //   M.updateTextFields();
